@@ -122,3 +122,25 @@
     }
   }
 }
+
+.main__glow {
+  width: 63%;
+  aspect-ratio: 1;
+  position: absolute;
+  z-index: var(--z-hidden);
+  top: 58%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-color: var(--col-bright-green);
+  filter: blur(to-rem(80));
+
+  @include respond-above(medium) {
+    width: 37.5%;
+    top: unset;
+    bottom: 8%;
+    right: 48%;
+    left: unset;
+    filter: blur(to-rem(180));
+  }
+}
