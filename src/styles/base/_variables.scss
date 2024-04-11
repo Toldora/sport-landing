@@ -12,7 +12,10 @@
   --col-total-black: #{$col-total-black};
   --col-total-black-rgb: #{$col-total-black-rgb};
 
+  --col-tibetan-yellow: #{$col-tibetan-yellow};
+  --col-nuclear-fallout: #{$col-nuclear-fallout};
   --col-gordons-green: #{$col-gordons-green};
+  --col-gordons-green-rgb: #{$col-gordons-green-rgb};
   --col-rich-olive: #{$col-rich-olive};
   --col-vermilion-cinnabar: #{$col-vermilion-cinnabar};
   --col-radiant-silver: #{$col-radiant-silver};
@@ -21,16 +24,10 @@
   --col-dark-tone-ink: #{$col-dark-tone-ink};
   --col-dark-tone-ink-rgb: #{$col-dark-tone-ink-rgb};
   --col-black-chestnut-oak: #{$col-black-chestnut-oak};
-  --col-rich-red: #{$col-rich-red};
-  --col-incision: #{$col-incision};
-  --col-incision-rgb: #{$col-incision-rgb};
-  --col-love-red: #{$col-love-red};
-  --col-caraquenian-crimson: #{$col-caraquenian-crimson};
 
   // Z-indexes
   --z-modal-overlay: 14;
   --z-modal: 9;
-  --z-app-navbar: 7;
   --z-main-content: 2;
   --z-default: 1;
   --z-hidden: -1;
@@ -59,37 +56,16 @@
 
   // Base
   --primary-text-color: var(--col-radiant-silver);
+  --container-max-width: #{to-rem(420)};
+  --container-side-padding: 0;
 
-  @media (orientation: portrait) {
-    --container-max-width: #{to-rem(380)};
-    --container-side-padding: #{to-rem(20)};
-  }
-
-  @media (orientation: landscape) {
-    --container-max-width: #{to-rem(1100)};
+  @include respond-above(medium) {
+    --container-max-width: #{to-rem(1600)};
     --container-side-padding: #{to-rem(40)};
-
-    @include respond-above(xmedium) {
-      --container-max-width: #{to-rem(1180)};
-    }
-
-    @include respond-above(large) {
-      --container-max-width: #{to-rem(1620)};
-      --container-side-padding: #{to-rem(50)};
-    }
   }
 
   // Common
   --scrollbar-color: var(--primary-text-color);
-
-  // App navbar
-  @media (orientation: portrait) {
-    --app-navbar-height: #{to-rem(50)};
-  }
-
-  @media (orientation: landscape) {
-    --app-navbar-height: #{clamp(to-rem(60), vh(9), to-rem(80))};
-  }
 
   // App overlay
   --app-overlay-bg: rgba(var(--col-dark-tone-ink-rgb), 60%);
