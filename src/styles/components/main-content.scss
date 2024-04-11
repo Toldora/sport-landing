@@ -99,6 +99,10 @@
   display: none;
 
   @include respond-above(medium) {
+    --sign-up-form-input-bg: var(--col-rich-olive);
+    --sign-up-form-text-color: var(--col-total-white);
+    --auth-type-radio-bg: var(--sign-up-form-input-bg);
+
     position: relative;
     z-index: var(--z-default);
     display: flex;
