@@ -3,9 +3,9 @@ import '@/styles/index.scss';
 import 'virtual:svg-icons-register';
 import queryString from 'query-string';
 import {
-  SignUpForm,
+  // SignUpForm,
   compileSignUpFormMarkup,
-  setToLS,
+  // setToLS,
   getFromLS,
 } from 'mayanbet-sdk';
 import '@/plugins';
@@ -43,12 +43,12 @@ const desktopSignUpWrapperRef = document.querySelector(
 
 desktopSignUpWrapperRef.insertAdjacentHTML('beforeend', markup);
 
-new SignUpForm({
-  formRef: document.forms[FORM_NAME],
-  submitCallback: async () => {
-    setToLS('isAlreadyRegistered', true);
-  },
-});
+// new SignUpForm({
+//   formRef: document.forms[FORM_NAME],
+//   submitCallback: async () => {
+//     setToLS('isAlreadyRegistered', true);
+//   },
+// });
 
 const showAuthBtnRef = document.querySelector('.js-show-auth-btn');
 
